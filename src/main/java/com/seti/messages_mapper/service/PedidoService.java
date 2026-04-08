@@ -32,7 +32,7 @@ public class PedidoService {
         String fullXml = XmlUtil.wrap(bodyXml);
 
         // 4. Enviar
-        String responseXml = soapClient.sendSoapRequest(fullXml);
+        String responseXml = soapClient.sendMockedSoapRequest(fullXml);
 
         // 5. Parse response
         return XmlUtil.parse(responseXml);

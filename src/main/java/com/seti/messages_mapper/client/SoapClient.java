@@ -25,4 +25,24 @@ public class SoapClient {
                 .doOnError(e -> log.error("Error en consumo SOAP", e))
                 .block();
     }
+
+    public static String sendMockedSoapRequest(String xml) {
+
+        log.info("Mockeando respuesta SOAP");
+
+        return """
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                     xmlns:env="http://WSDLs/EnvioPedidos/EnvioPedidosAcme">
+       <soapenv:Header/>
+       <soapenv:Body>
+          <env:EnvioPedidoAcmeResponse>
+             <EnvioPedidoResponse>
+                <Codigo>75630275</Codigo>
+                <Mensaje>Entregado exitosamente al cliente</Mensaje>
+             </EnvioPedidoResponse>
+          </env:EnvioPedidoAcmeResponse>
+       </soapenv:Body>
+    </soapenv:Envelope>
+    """;
+    }
 }

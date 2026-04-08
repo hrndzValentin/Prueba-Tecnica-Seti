@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "472962f9-803c-45f6-a0ba-ea74448c74bf",
+    "name": "Seti Prueba Tecnica",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "23647191",
+    "_collection_link": "https://go.postman.co/collection/23647191-472962f9-803c-45f6-a0ba-ea74448c74bf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Consume mocky uri",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"numPedido\": \"75630275\",\n    \"cantidadPedido\": \"1\",\n    \"codigoEAN\": \"00110000765191002104587\",\n    \"nombreProducto\": \"Armario INVAL\",\n    \"numDocumento\": \"1113987400\",\n    \"direccion\": \"CR 72B 45 12 APT 301\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/api/pedidos",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "pedidos"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
